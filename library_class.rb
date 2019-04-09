@@ -35,4 +35,10 @@ end
     end
   end
 
+  def book_rental_info(title)
+    for book in @books
+      return book[:rental_details] if book[:title] == title
+    end
+  end
+
 end
