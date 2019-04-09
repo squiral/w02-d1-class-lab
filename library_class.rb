@@ -49,4 +49,16 @@ end
       }}
   end
 
+  def add_rental_details(new_book, new_student_name, new_date)
+    for book in @books
+      if book[:title] == new_book
+        book[:rental_details][:student_name] = new_student_name
+        book[:rental_details][:date] = new_date
+      end
+    end
+
+    return book_rental_info(new_book)
+
+  end
+
 end

@@ -35,4 +35,12 @@ class TestLibrary < MiniTest::Test
       }}, result)
   end
 
+  def test_add_rental_details
+    library = Library.new()
+    result = library.add_rental_details("To Kill a Mockingbird", "Sarah", "12/11/19")
+    assert_equal({
+      student_name: "Sarah",
+      date: "12/11/19"
+    }, result)
+  end
 end
