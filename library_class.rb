@@ -41,4 +41,12 @@ end
     end
   end
 
+  def add_new_book(new_book)
+    @books << {title: new_book,
+      rental_details: {
+        student_name: "",
+        date: ""
+      }}
+  end
+
 end
